@@ -20,3 +20,7 @@ before_fork do |server, worker|
     end
   end
 end
+
+before_exec do |_s|
+  Dotenv.overload
+end
